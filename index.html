@@ -4,46 +4,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jinsi Unjha | Portfolio</title>
   <style>
-    /* Pastel color palette */
+    /* Colors */
     :root {
-      --bg: #fef6e4;
-      --primary: #a8dadc;
-      --secondary: #ffb6b9;
-      --accent: #ffd6a5;
-      --text-dark: #1d3557;
-      --text-light: #457b9d;
+      --bg: #f0f4f8;
+      --primary: #1e3a5f;
+      --secondary: #2a9d8f;
+      --accent: #f2c94c;
+      --text-dark: #1a1a1a;
+      --card-bg: #ffffff;
     }body { margin:0; font-family:'Segoe UI', sans-serif; background: var(--bg); color: var(--text-dark); }
 
-header { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; background: var(--primary); color: var(--text-dark); }
+/* Header */
+header { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; background: var(--primary); color: #fff; }
 header h1 { font-size:3rem; margin-bottom:10px; }
-header h2 { font-weight: normal; color: var(--text-light); margin-bottom:20px; }
-header p { max-width:700px; margin: 0 auto; line-height:1.6; }
-header a.btn { display:inline-block; margin-top:20px; padding:12px 28px; border-radius:25px; background: var(--secondary); color: var(--text-dark); font-weight:bold; text-decoration:none; transition:0.3s; }
-header a.btn:hover { transform: scale(1.05); background: var(--accent); }
+header h2 { font-weight: normal; color: var(--accent); margin-bottom:20px; }
+header p { max-width:700px; margin:0 auto 20px auto; line-height:1.6; }
+header a.btn { display:inline-block; margin-top:20px; padding:12px 28px; border-radius:25px; background: var(--accent); color: var(--primary); font-weight:bold; text-decoration:none; transition:0.3s; }
+header a.btn:hover { transform: scale(1.05); background: #e6c24f; }
 
+/* Sections */
 section { padding:60px 10%; }
-h3 { color: var(--primary); margin-bottom:20px; text-align:center; }
+section h3 { color: var(--primary); text-align:center; margin-bottom:40px; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.4s; }
+
+/* Cards */
+.card { background: var(--card-bg); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.4s; opacity:0; transform: translateY(20px); }
 .card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
 
-footer { text-align:center; padding:20px; background: var(--primary); color: var(--text-dark); font-size:0.9rem; }
-
 /* Animations */
-.fade-in { animation: fadeIn 1s ease forwards; opacity:0; }
-@keyframes fadeIn { to { opacity:1; } }
+.fade-in { animation: fadeIn 1s forwards; }
+@keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
+
+/* Footer */
+footer { text-align:center; padding:20px; background: var(--primary); color:#fff; font-size:0.9rem; }
 
   </style>
 </head>
 <body><header class="fade-in">
   <h1>Jinsi Unjha 👋</h1>
-  <h2>Account-focused Business Development Professional</h2>
-  <p>Experienced in B2B sales, account management, digital campaigns, and Odoo ERP. I enjoy driving revenue growth and enabling partner success.</p>
+  <h2>Business Development & Digital Marketing Professional</h2>
+  <p>Hi! I’m a results-driven business development professional with experience in B2B sales, account management, and digital marketing. I enjoy driving revenue growth, managing client relationships, and turning ideas into measurable results.</p>
   <a href="#contact" class="btn">Contact Me</a>
 </header><section>
   <h3>Experience</h3>
   <div class="grid">
-    <div class="card fade-in">
+    <div class="card fade-in" style="animation-delay:0.1s">
       <h4>Business Development Executive</h4>
       <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
       <ul>
@@ -52,7 +57,7 @@ footer { text-align:center; padding:20px; background: var(--primary); color: var
         <li>Primary client contact during onboarding & post-sales</li>
       </ul>
     </div>
-    <div class="card fade-in">
+    <div class="card fade-in" style="animation-delay:0.2s">
       <h4>Management Trainee – Sales</h4>
       <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
       <ul>
@@ -61,7 +66,7 @@ footer { text-align:center; padding:20px; background: var(--primary); color: var
         <li>Gained expertise in B2B sales, Odoo ERP, and competitor analysis</li>
       </ul>
     </div>
-    <div class="card fade-in">
+    <div class="card fade-in" style="animation-delay:0.3s">
       <h4>Marketing & Equity Research Trainee</h4>
       <p>MS Trading School, Indore</p>
       <ul>
@@ -74,44 +79,56 @@ footer { text-align:center; padding:20px; background: var(--primary); color: var
 </section><section>
   <h3>Education</h3>
   <div class="grid">
-    <div class="card fade-in"><strong>MBA, Avantika University (2023–2025)</strong><br>CGPA: 8.42</div>
-    <div class="card fade-in"><strong>B.Sc. Computer Science, Vikram University (2020–2023)</strong><br>76%</div>
-    <div class="card fade-in"><strong>Senior Secondary (12th), Vinay Adarsh H.S. School (2018–2020)</strong><br>89.4%</div>
-    <div class="card fade-in"><strong>High School (10th), Vinay Adarsh H.S. School (2016–2018)</strong><br>88.2%</div>
+    <div class="card fade-in" style="animation-delay:0.1s"><strong>MBA, Avantika University (2023–2025)</strong><br>CGPA: 8.42</div>
+    <div class="card fade-in" style="animation-delay:0.2s"><strong>B.Sc. Computer Science, Vikram University (2020–2023)</strong><br>76%</div>
+    <div class="card fade-in" style="animation-delay:0.3s"><strong>Senior Secondary (12th), Vinay Adarsh H.S. School (2018–2020)</strong><br>89.4%</div>
+    <div class="card fade-in" style="animation-delay:0.4s"><strong>High School (10th), Vinay Adarsh H.S. School (2016–2018)</strong><br>88.2%</div>
   </div>
 </section><section>
   <h3>Skills</h3>
   <div class="grid">
-    <div class="card fade-in">B2B Sales Using AI Tools</div>
-    <div class="card fade-in">Sales Pipeline Management</div>
-    <div class="card fade-in">Account Management</div>
-    <div class="card fade-in">Revenue Growth</div>
-    <div class="card fade-in">Client Retention</div>
-    <div class="card fade-in">Business Communication</div>
-    <div class="card fade-in">Google Suite & MS Office</div>
+    <div class="card fade-in" style="animation-delay:0.1s">B2B Sales Using AI Tools</div>
+    <div class="card fade-in" style="animation-delay:0.2s">Sales Pipeline Management</div>
+    <div class="card fade-in" style="animation-delay:0.3s">Account Management</div>
+    <div class="card fade-in" style="animation-delay:0.4s">Revenue Growth</div>
+    <div class="card fade-in" style="animation-delay:0.5s">Client Retention</div>
+    <div class="card fade-in" style="animation-delay:0.6s">Business Communication</div>
+    <div class="card fade-in" style="animation-delay:0.7s">Google Suite & MS Office</div>
   </div>
 </section><section>
-  <h3>Achievements & Certifications</h3>
+  <h3>Projects & Achievements</h3>
   <div class="grid">
-    <div class="card fade-in">International Publication Certificate – Eudoxia Research University (USA)</div>
-    <div class="card fade-in">Medhavi Vidyarthi Award – State Government (2020)</div>
-    <div class="card fade-in">1st Place – College-level Business Expo (2022)</div>
-    <div class="card fade-in">2nd Place – District-level Rangoli Competition (2018)</div>
-    <div class="card fade-in">Market Research Certification – Great Learning</div>
+    <div class="card fade-in" style="animation-delay:0.1s">Shopify – Odoo Connector</div>
+    <div class="card fade-in" style="animation-delay:0.2s">Brand Gully Exhibition Marketing</div>
+    <div class="card fade-in" style="animation-delay:0.3s">AMUN & College Events Leadership</div>
+    <div class="card fade-in" style="animation-delay:0.4s">International Publication Certificate – Eudoxia Research University (USA)</div>
+    <div class="card fade-in" style="animation-delay:0.5s">Medhavi Vidyarthi Award – State Government</div>
   </div>
 </section><section>
   <h3>Volunteering & Leadership</h3>
   <div class="grid">
-    <div class="card fade-in">Head of Hospitality & Food – AMUN 2024</div>
-    <div class="card fade-in">Core Team – HR Conclave</div>
-    <div class="card fade-in">Volunteered – India's Smart City Conclave 2023</div>
-    <div class="card fade-in">Core Team – AMUN 2023</div>
+    <div class="card fade-in" style="animation-delay:0.1s">Head of Hospitality & Food – AMUN 2024</div>
+    <div class="card fade-in" style="animation-delay:0.2s">Core Team – HR Conclave</div>
+    <div class="card fade-in" style="animation-delay:0.3s">Volunteered – India's Smart City Conclave 2023</div>
+    <div class="card fade-in" style="animation-delay:0.4s">Core Team – AMUN 2023</div>
   </div>
 </section><section id="contact">
   <h3>Contact</h3>
-  <p>Email: <a href="mailto:unjhajinsi@gmail.com" style="color:var(--secondary);">your-email@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/jinsi-unjha-66a164287/" target="_blank" style="color:var(--secondary);">linkedin.com/in/jinsi-unjha-66a164287</a></p>
+  <p>Email: <a href="mailto:unjhajinsi25@@gmail.com" style="color:var(--accent);">your-email@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/jinsi-unjha-66a164287/" target="_blank" style="color:var(--accent);">linkedin.com/in/jinsi-unjha-66a164287</a></p>
 </section><footer>
   © 2026 Jinsi Unjha. All rights reserved.
-</footer></body>
+</footer><script>
+  // Trigger fade-in animation when section is in viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.card').forEach(card => observer.observe(card));
+</script></body>
 </html>
