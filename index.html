@@ -1,54 +1,103 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jinsi Unjha | Portfolio</title>
   <style>
-    /* Colors */
     :root {
-      --bg: #f0f4f8;
-      --primary: #1e3a5f;
-      --secondary: #2a9d8f;
-      --accent: #f2c94c;
-      --text-dark: #1a1a1a;
-      --card-bg: #ffffff;
-    }body { margin:0; font-family:'Segoe UI', sans-serif; background: var(--bg); color: var(--text-dark); }
+      --header-bg: #6a0dad;       /* Deep Violet */
+      --section-bg: #fff;          /* White background */
+      --card-bg: #9b59b6;          /* Bold lavender */
+      --accent: #1e90ff;           /* Electric blue for buttons */
+      --text-dark: #111111;        /* Black text */
+      --shadow: rgba(0,0,0,0.15);  /* Card shadow */
+    }
 
-/* Header */
-header { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; background: var(--primary); color: #fff; }
-header h1 { font-size:3rem; margin-bottom:10px; }
-header h2 { font-weight: normal; color: var(--accent); margin-bottom:20px; }
-header p { max-width:700px; margin:0 auto 20px auto; line-height:1.6; }
-header a.btn { display:inline-block; margin-top:20px; padding:12px 28px; border-radius:25px; background: var(--accent); color: var(--primary); font-weight:bold; text-decoration:none; transition:0.3s; }
-header a.btn:hover { transform: scale(1.05); background: #e6c24f; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--section-bg);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
 
-/* Sections */
-section { padding:60px 10%; }
-section h3 { color: var(--primary); text-align:center; margin-bottom:40px; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    /* Header */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: var(--header-bg);
+      color: #fff;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header h2 { font-size: 1.5rem; color: var(--accent); margin-bottom: 20px; }
+    header p { max-width: 700px; margin: 0 auto 20px auto; line-height:1.6; }
+    header a.btn {
+      display:inline-block;
+      padding:12px 28px;
+      border-radius:25px;
+      background: var(--accent);
+      color: var(--text-dark);
+      font-weight:bold;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    header a.btn:hover { transform: scale(1.05); background: #17a2b8; }
 
-/* Cards */
-.card { background: var(--card-bg); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.4s; opacity:0; transform: translateY(20px); }
-.card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
+    /* Sections */
+    section { padding:60px 10%; position: relative; overflow: hidden; }
+    section h3 { text-align: center; margin-bottom: 40px; color: var(--header-bg); }
 
-/* Animations */
-.fade-in { animation: fadeIn 1s forwards; }
-@keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
 
-/* Footer */
-footer { text-align:center; padding:20px; background: var(--primary); color:#fff; font-size:0.9rem; }
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      color: var(--text-dark);
+      padding:20px;
+      border-radius:15px;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition:0.4s;
+      opacity:0;
+      transform: translateY(20px);
+    }
+    .card:hover { transform: translateY(-10px); box-shadow:0 20px 40px var(--shadow); }
 
+    /* Animations */
+    .fade-in { animation: fadeIn 1s forwards; }
+    .slide-left { transform: translateX(-50px); opacity:0; animation: slideLeft 1s forwards; }
+    .slide-right { transform: translateX(50px); opacity:0; animation: slideRight 1s forwards; }
+
+    @keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
+    @keyframes slideLeft { to { transform: translateX(0); opacity:1; } }
+    @keyframes slideRight { to { transform: translateX(0); opacity:1; } }
+
+    /* Footer */
+    footer { text-align:center; padding:20px; background: var(--header-bg); color:#fff; font-size:0.9rem; }
   </style>
 </head>
-<body><header class="fade-in">
+<body>
+
+<header class="fade-in">
   <h1>Jinsi Unjha 👋</h1>
   <h2>Business Development & Digital Marketing Professional</h2>
-  <p>Hi! I’m a results-driven business development professional with experience in B2B sales, account management, and digital marketing. I enjoy driving revenue growth, managing client relationships, and turning ideas into measurable results.</p>
+  <p>Hi! I’m a results-driven professional with experience in B2B sales, account management, and digital marketing. I enjoy creating strategies that drive revenue growth and client success.</p>
   <a href="#contact" class="btn">Contact Me</a>
-</header><section>
+</header>
+
+<section>
   <h3>Experience</h3>
   <div class="grid">
-    <div class="card fade-in" style="animation-delay:0.1s">
+    <div class="card slide-left" style="animation-delay:0.1s">
       <h4>Business Development Executive</h4>
       <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
       <ul>
@@ -57,7 +106,7 @@ footer { text-align:center; padding:20px; background: var(--primary); color:#fff
         <li>Primary client contact during onboarding & post-sales</li>
       </ul>
     </div>
-    <div class="card fade-in" style="animation-delay:0.2s">
+    <div class="card slide-right" style="animation-delay:0.2s">
       <h4>Management Trainee – Sales</h4>
       <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
       <ul>
@@ -66,7 +115,7 @@ footer { text-align:center; padding:20px; background: var(--primary); color:#fff
         <li>Gained expertise in B2B sales, Odoo ERP, and competitor analysis</li>
       </ul>
     </div>
-    <div class="card fade-in" style="animation-delay:0.3s">
+    <div class="card slide-left" style="animation-delay:0.3s">
       <h4>Marketing & Equity Research Trainee</h4>
       <p>MS Trading School, Indore</p>
       <ul>
@@ -76,59 +125,65 @@ footer { text-align:center; padding:20px; background: var(--primary); color:#fff
       </ul>
     </div>
   </div>
-</section><section>
-  <h3>Education</h3>
-  <div class="grid">
-    <div class="card fade-in" style="animation-delay:0.1s"><strong>MBA, Avantika University (2023–2025)</strong><br>CGPA: 8.42</div>
-    <div class="card fade-in" style="animation-delay:0.2s"><strong>B.Sc. Computer Science, Vikram University (2020–2023)</strong><br>76%</div>
-    <div class="card fade-in" style="animation-delay:0.3s"><strong>Senior Secondary (12th), Vinay Adarsh H.S. School (2018–2020)</strong><br>89.4%</div>
-    <div class="card fade-in" style="animation-delay:0.4s"><strong>High School (10th), Vinay Adarsh H.S. School (2016–2018)</strong><br>88.2%</div>
-  </div>
-</section><section>
+</section>
+
+<section>
   <h3>Skills</h3>
   <div class="grid">
-    <div class="card fade-in" style="animation-delay:0.1s">B2B Sales Using AI Tools</div>
-    <div class="card fade-in" style="animation-delay:0.2s">Sales Pipeline Management</div>
-    <div class="card fade-in" style="animation-delay:0.3s">Account Management</div>
-    <div class="card fade-in" style="animation-delay:0.4s">Revenue Growth</div>
-    <div class="card fade-in" style="animation-delay:0.5s">Client Retention</div>
-    <div class="card fade-in" style="animation-delay:0.6s">Business Communication</div>
-    <div class="card fade-in" style="animation-delay:0.7s">Google Suite & MS Office</div>
+    <div class="card slide-right" style="animation-delay:0.1s">B2B Sales Using AI Tools</div>
+    <div class="card slide-left" style="animation-delay:0.2s">Sales Pipeline Management</div>
+    <div class="card slide-right" style="animation-delay:0.3s">Account Management</div>
+    <div class="card slide-left" style="animation-delay:0.4s">Revenue Growth</div>
+    <div class="card slide-right" style="animation-delay:0.5s">Client Retention</div>
+    <div class="card slide-left" style="animation-delay:0.6s">Business Communication</div>
+    <div class="card slide-right" style="animation-delay:0.7s">Google Suite & MS Office</div>
   </div>
-</section><section>
+</section>
+
+<section>
   <h3>Projects & Achievements</h3>
   <div class="grid">
-    <div class="card fade-in" style="animation-delay:0.1s">Shopify – Odoo Connector</div>
-    <div class="card fade-in" style="animation-delay:0.2s">Brand Gully Exhibition Marketing</div>
-    <div class="card fade-in" style="animation-delay:0.3s">AMUN & College Events Leadership</div>
-    <div class="card fade-in" style="animation-delay:0.4s">International Publication Certificate – Eudoxia Research University (USA)</div>
-    <div class="card fade-in" style="animation-delay:0.5s">Medhavi Vidyarthi Award – State Government</div>
+    <div class="card slide-left" style="animation-delay:0.1s">Shopify – Odoo Connector</div>
+    <div class="card slide-right" style="animation-delay:0.2s">Brand Gully Exhibition Marketing</div>
+    <div class="card slide-left" style="animation-delay:0.3s">AMUN & College Events Leadership</div>
+    <div class="card slide-right" style="animation-delay:0.4s">International Publication Certificate – Eudoxia Research University (USA)</div>
+    <div class="card slide-left" style="animation-delay:0.5s">Medhavi Vidyarthi Award – State Government</div>
   </div>
-</section><section>
+</section>
+
+<section>
   <h3>Volunteering & Leadership</h3>
   <div class="grid">
-    <div class="card fade-in" style="animation-delay:0.1s">Head of Hospitality & Food – AMUN 2024</div>
-    <div class="card fade-in" style="animation-delay:0.2s">Core Team – HR Conclave</div>
-    <div class="card fade-in" style="animation-delay:0.3s">Volunteered – India's Smart City Conclave 2023</div>
-    <div class="card fade-in" style="animation-delay:0.4s">Core Team – AMUN 2023</div>
+    <div class="card slide-right" style="animation-delay:0.1s">Head of Hospitality & Food – AMUN 2024</div>
+    <div class="card slide-left" style="animation-delay:0.2s">Core Team – HR Conclave</div>
+    <div class="card slide-right" style="animation-delay:0.3s">Volunteered – India's Smart City Conclave 2023</div>
+    <div class="card slide-left" style="animation-delay:0.4s">Core Team – AMUN 2023</div>
   </div>
-</section><section id="contact">
+</section>
+
+<section id="contact">
   <h3>Contact</h3>
-  <p>Email: <a href="mailto:unjhajinsi25@@gmail.com" style="color:var(--accent);">your-email@gmail.com</a></p>
+  <p>Email: <a href="mailto:your-email@gmail.com" style="color:var(--accent);">your-email@gmail.com</a></p>
   <p>LinkedIn: <a href="https://www.linkedin.com/in/jinsi-unjha-66a164287/" target="_blank" style="color:var(--accent);">linkedin.com/in/jinsi-unjha-66a164287</a></p>
-</section><footer>
+</section>
+
+<footer>
   © 2026 Jinsi Unjha. All rights reserved.
-</footer><script>
-  // Trigger fade-in animation when section is in viewport
+</footer>
+
+<script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('fade-in');
+        entry.target.classList.remove('slide-left', 'slide-right');
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
   document.querySelectorAll('.card').forEach(card => observer.observe(card));
-</script></body>
+</script>
+
+</body>
 </html>
