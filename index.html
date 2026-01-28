@@ -1,116 +1,59 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinsi Unjha | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #020617);
     }
-
-    header h1 { font-size: 3rem; animation: fadeInDown 1s ease; }
-    header h1 span { color: #38bdf8; }
-    header p { margin-top: 15px; font-size: 1.2rem; opacity: 0.85; animation: fadeInUp 1.2s ease; }
-
+    .container {
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: normal;
+      color: #00ffd5;
+    }
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
     .btn {
       display: inline-block;
       margin-top: 30px;
-      padding: 12px 28px;
-      border-radius: 30px;
-      background: #38bdf8;
-      color: #020617;
-      font-weight: 600;
-      transition: 0.3s;
+      padding: 12px 25px;
+      background: #00ffd5;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
     }
+  </style>
+</head>
+<body>
 
-    .btn:hover { transform: scale(1.05); background: #0ea5e9; }
+  <div class="container">
+    <h1>Hi, I’m Jinsi Unjha 👋</h1>
+    <h2>Business Development & Digital Marketing Enthusiast</h2>
 
-    section { padding: 80px 10%; }
-
-    h2 { font-size: 2.2rem; margin-bottom: 30px; color: #38bdf8; }
-
-    .about p { max-width: 700px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 15px;
-      transition: 0.4s;
-    }
-
-    .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(56,189,248,0.2); }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style></head>
-<body>  <!-- HERO SECTION -->  <header>
-    <div>
-      <h1>Hi, I'm <span>Your Name</span></h1>
-      <p>Sales | Account Management | Business Development</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </header>  <!-- ABOUT -->  <section class="about">
-    <h2>About Me</h2>
     <p>
-      I am a results-driven sales and business development professional with hands-on experience in B2B sales,
-      account handling, and ERP solutions. I specialize in understanding client needs and turning conversations
-      into conversions.
+      I’m a management graduate with experience in sales, account handling,
+      and digital platforms. I enjoy building growth strategies,
+      working with clients, and turning ideas into results.
     </p>
-  </section>  <!-- EXPERIENCE -->  <section>
-    <h2>Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Business Development Executive</h3>
-        <p>Emipro Technologies Pvt. Ltd.</p>
-        <p>Worked on lead qualification, client onboarding, and upselling ERP solutions.</p>
-      </div>
-      <div class="card">
-        <h3>Management Trainee – Sales</h3>
-        <p>Handled CRM, pre-sales communication, and competitor analysis.</p>
-      </div>
-    </div>
-  </section>  <!-- SKILLS -->  <section>
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Sales & Negotiation</div>
-      <div class="card">Account Management</div>
-      <div class="card">CRM & ERP (Odoo)</div>
-      <div class="card">Digital Marketing</div>
-    </div>
-  </section>  <!-- CONTACT -->  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>LinkedIn: linkedin.com/in/yourname</p>
-  </section>  <footer>
-    © 2026 Your Name. All rights reserved.
-  </footer></body>
+
+    <a href="mailto:your-email@gmail.com" class="btn">Contact Me</a>
+  </div>
+
+</body>
 </html>
