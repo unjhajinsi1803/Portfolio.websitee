@@ -4,68 +4,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jinsi Unjha | Portfolio</title>
   <style>
-    body { margin:0; font-family:Arial,sans-serif; background:linear-gradient(135deg,#0f172a,#020617); color:white; }
-    header { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 20px; }
-    h1 { font-size:3rem; color:#38bdf8; margin-bottom:10px; }
-    h2 { font-weight:normal; color:#e0e0e0; margin-bottom:20px; }
-    p { max-width:700px; margin:10px auto; line-height:1.6; }
-    a.btn { display:inline-block; margin-top:20px; padding:12px 28px; border-radius:25px; background:#38bdf8; color:#020617; font-weight:bold; text-decoration:none; transition:0.3s; }
-    a.btn:hover { transform:scale(1.05); background:#0ea5e9; }
-    section { padding:60px 10%; }
-    h3 { color:#38bdf8; margin-bottom:10px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .card { background:#020617; padding:20px; border-radius:15px; transition:0.4s; }
-    .card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(56,189,248,0.2); }
-    footer { text-align:center; padding:20px; background:#020617; font-size:0.9rem; opacity:0.7; }
+    /* Pastel color palette */
+    :root {
+      --bg: #fef6e4;
+      --primary: #a8dadc;
+      --secondary: #ffb6b9;
+      --accent: #ffd6a5;
+      --text-dark: #1d3557;
+      --text-light: #457b9d;
+    }body { margin:0; font-family:'Segoe UI', sans-serif; background: var(--bg); color: var(--text-dark); }
+
+header { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; background: var(--primary); color: var(--text-dark); }
+header h1 { font-size:3rem; margin-bottom:10px; }
+header h2 { font-weight: normal; color: var(--text-light); margin-bottom:20px; }
+header p { max-width:700px; margin: 0 auto; line-height:1.6; }
+header a.btn { display:inline-block; margin-top:20px; padding:12px 28px; border-radius:25px; background: var(--secondary); color: var(--text-dark); font-weight:bold; text-decoration:none; transition:0.3s; }
+header a.btn:hover { transform: scale(1.05); background: var(--accent); }
+
+section { padding:60px 10%; }
+h3 { color: var(--primary); margin-bottom:20px; text-align:center; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:0.4s; }
+.card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
+
+footer { text-align:center; padding:20px; background: var(--primary); color: var(--text-dark); font-size:0.9rem; }
+
+/* Animations */
+.fade-in { animation: fadeIn 1s ease forwards; opacity:0; }
+@keyframes fadeIn { to { opacity:1; } }
+
   </style>
 </head>
-<body><header>
-  <h1>Hi, I’m Jinsi Unjha 👋</h1>
-  <h2>Business Development & Digital Marketing Professional</h2>
-  <p>I have experience in B2B sales, account handling, and digital campaigns. I enjoy turning ideas into measurable results and building long-term client relationships.</p>
+<body><header class="fade-in">
+  <h1>Jinsi Unjha 👋</h1>
+  <h2>Account-focused Business Development Professional</h2>
+  <p>Experienced in B2B sales, account management, digital campaigns, and Odoo ERP. I enjoy driving revenue growth and enabling partner success.</p>
   <a href="#contact" class="btn">Contact Me</a>
 </header><section>
   <h3>Experience</h3>
   <div class="grid">
-    <div class="card">
+    <div class="card fade-in">
       <h4>Business Development Executive</h4>
-      <p>Emipro Technologies Pvt. Ltd.</p>
-      <p>Handled client onboarding, lead qualification, and upselling ERP solutions.</p>
+      <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
+      <ul>
+        <li>Managed multiple B2B client accounts and achieved 80–90% of revenue targets</li>
+        <li>Solution presentations with 45% average conversion rate</li>
+        <li>Primary client contact during onboarding & post-sales</li>
+      </ul>
     </div>
-    <div class="card">
+    <div class="card fade-in">
       <h4>Management Trainee – Sales</h4>
-      <p>Emipro Technologies Pvt. Ltd.</p>
-      <p>Supported pre-sales, competitor analysis, and account management activities.</p>
+      <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
+      <ul>
+        <li>Supported pre-sales communication and lead nurturing</li>
+        <li>Promoted add-ons and upselling strategies</li>
+        <li>Gained expertise in B2B sales, Odoo ERP, and competitor analysis</li>
+      </ul>
     </div>
+    <div class="card fade-in">
+      <h4>Marketing & Equity Research Trainee</h4>
+      <p>MS Trading School, Indore</p>
+      <ul>
+        <li>Created promotional materials & social media content</li>
+        <li>Organized events like Women's Summit</li>
+        <li>Enhanced brand visibility through online campaigns</li>
+      </ul>
+    </div>
+  </div>
+</section><section>
+  <h3>Education</h3>
+  <div class="grid">
+    <div class="card fade-in"><strong>MBA, Avantika University (2023–2025)</strong><br>CGPA: 8.42</div>
+    <div class="card fade-in"><strong>B.Sc. Computer Science, Vikram University (2020–2023)</strong><br>76%</div>
+    <div class="card fade-in"><strong>Senior Secondary (12th), Vinay Adarsh H.S. School (2018–2020)</strong><br>89.4%</div>
+    <div class="card fade-in"><strong>High School (10th), Vinay Adarsh H.S. School (2016–2018)</strong><br>88.2%</div>
   </div>
 </section><section>
   <h3>Skills</h3>
   <div class="grid">
-    <div class="card">Sales & Negotiation</div>
-    <div class="card">Account Management</div>
-    <div class="card">CRM & ERP (Odoo)</div>
-    <div class="card">Digital Marketing</div>
+    <div class="card fade-in">B2B Sales Using AI Tools</div>
+    <div class="card fade-in">Sales Pipeline Management</div>
+    <div class="card fade-in">Account Management</div>
+    <div class="card fade-in">Revenue Growth</div>
+    <div class="card fade-in">Client Retention</div>
+    <div class="card fade-in">Business Communication</div>
+    <div class="card fade-in">Google Suite & MS Office</div>
   </div>
 </section><section>
-  <h3>Projects & Achievements</h3>
+  <h3>Achievements & Certifications</h3>
   <div class="grid">
-    <div class="card">
-      <h4>Shopify – Odoo Connector</h4>
-      <p>Integrated Shopify with Odoo ERP, streamlining e-commerce operations for clients.</p>
-    </div>
-    <div class="card">
-      <h4>Brand Gully Exhibition</h4>
-      <p>Marketing & promotion for ‘Lost and Found’ brand at Avantika University.</p>
-    </div>
-    <div class="card">
-      <h4>College Events (AMUN, Prachaar Manch)</h4>
-      <p>Leadership roles in organizing large-scale events and managing teams.</p>
-    </div>
+    <div class="card fade-in">International Publication Certificate – Eudoxia Research University (USA)</div>
+    <div class="card fade-in">Medhavi Vidyarthi Award – State Government (2020)</div>
+    <div class="card fade-in">1st Place – College-level Business Expo (2022)</div>
+    <div class="card fade-in">2nd Place – District-level Rangoli Competition (2018)</div>
+    <div class="card fade-in">Market Research Certification – Great Learning</div>
+  </div>
+</section><section>
+  <h3>Volunteering & Leadership</h3>
+  <div class="grid">
+    <div class="card fade-in">Head of Hospitality & Food – AMUN 2024</div>
+    <div class="card fade-in">Core Team – HR Conclave</div>
+    <div class="card fade-in">Volunteered – India's Smart City Conclave 2023</div>
+    <div class="card fade-in">Core Team – AMUN 2023</div>
   </div>
 </section><section id="contact">
   <h3>Contact</h3>
-  <p>Email: your-email@gmail.com</p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/unjhajinsi1803" target="_blank" style="color:#38bdf8;">linkedin.com/in/unjhajinsi1803</a></p>
+  <p>Email: <a href="mailto:your-email@gmail.com" style="color:var(--secondary);">your-email@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/jinsi-unjha-66a164287/" target="_blank" style="color:var(--secondary);">linkedin.com/in/jinsi-unjha-66a164287</a></p>
 </section><footer>
   © 2026 Jinsi Unjha. All rights reserved.
 </footer></body>
