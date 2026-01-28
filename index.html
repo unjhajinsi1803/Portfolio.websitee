@@ -1,177 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jinsi Unjha | Radial Portfolio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: "Times New Roman", serif;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-    background-size: 400% 400%;
-    animation: gradientBG 20s ease infinite;
-    color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinsi Unjha | Portfolio</title>
+  <style>
+    :root {
+      --header-bg: #6a0dad;       /* Deep Violet */
+      --section-bg: #fff;          /* White background */
+      --card-bg: #9b59b6;          /* Bold lavender */
+      --accent: #1e90ff;           /* Electric blue for buttons */
+      --text-dark: #111111;        /* Black text */
+      --shadow: rgba(0,0,0,0.15);  /* Card shadow */
+    }
 
-  @keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--section-bg);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
 
-  .radial-container {
-    position: relative;
-    width: 90vw;
-    max-width: 900px;
-    height: 90vw;
-    max-height: 900px;
-  }
+    /* Header */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: var(--header-bg);
+      color: #fff;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header h2 { font-size: 1.5rem; color: var(--accent); margin-bottom: 20px; }
+    header p { max-width: 700px; margin: 0 auto 20px auto; line-height:1.6; }
+    header a.btn {
+      display:inline-block;
+      padding:12px 28px;
+      border-radius:25px;
+      background: var(--accent);
+      color: var(--text-dark);
+      font-weight:bold;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    header a.btn:hover { transform: scale(1.05); background: #17a2b8; }
 
-  .center-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 180px;
-    height: 180px;
-    margin-left: -90px;
-    margin-top: -90px;
-    border-radius: 50%;
-    background: #00ffd5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: background 0.3s;
-  }
+    /* Sections */
+    section { padding:60px 10%; position: relative; overflow: hidden; }
+    section h3 { text-align: center; margin-bottom: 40px; color: var(--header-bg); }
 
-  .orbit-circle {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-    transition: transform 0.4s, box-shadow 0.3s, background 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
 
-  .orbit-circle:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-  }
-</style>
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      color: var(--text-dark);
+      padding:20px;
+      border-radius:15px;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition:0.4s;
+      opacity:0;
+      transform: translateY(20px);
+    }
+    .card:hover { transform: translateY(-10px); box-shadow:0 20px 40px var(--shadow); }
+
+    /* Animations */
+    .fade-in { animation: fadeIn 1s forwards; }
+    .slide-left { transform: translateX(-50px); opacity:0; animation: slideLeft 1s forwards; }
+    .slide-right { transform: translateX(50px); opacity:0; animation: slideRight 1s forwards; }
+
+    @keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
+    @keyframes slideLeft { to { transform: translateX(0); opacity:1; } }
+    @keyframes slideRight { to { transform: translateX(0); opacity:1; } }
+
+    /* Footer */
+    footer { text-align:center; padding:20px; background: var(--header-bg); color:#fff; font-size:0.9rem; }
+  </style>
 </head>
 <body>
 
-<div class="radial-container">
-  <div class="center-circle" id="center-circle">Projects</div>
-  <!-- Orbiting circles will be dynamically generated -->
-</div>
+<header class="fade-in">
+  <h1>Jinsi Unjha 👋</h1>
+  <h2>Business Development & Digital Marketing Professional</h2>
+  <p>Hi! I’m a results-driven professional with experience in B2B sales, account management, and digital marketing. I enjoy creating strategies that drive revenue growth and client success.</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</header>
+
+<section>
+  <h3>Experience</h3>
+  <div class="grid">
+    <div class="card slide-left" style="animation-delay:0.1s">
+      <h4>Business Development Executive</h4>
+      <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
+      <ul>
+        <li>Managed multiple B2B client accounts and achieved 80–90% of revenue targets</li>
+        <li>Solution presentations with 45% average conversion rate</li>
+        <li>Primary client contact during onboarding & post-sales</li>
+      </ul>
+    </div>
+    <div class="card slide-right" style="animation-delay:0.2s">
+      <h4>Management Trainee – Sales</h4>
+      <p>Emipro Technologies Pvt. Ltd., Rajkot</p>
+      <ul>
+        <li>Supported pre-sales communication and lead nurturing</li>
+        <li>Promoted add-ons and upselling strategies</li>
+        <li>Gained expertise in B2B sales, Odoo ERP, and competitor analysis</li>
+      </ul>
+    </div>
+    <div class="card slide-left" style="animation-delay:0.3s">
+      <h4>Marketing & Equity Research Trainee</h4>
+      <p>MS Trading School, Indore</p>
+      <ul>
+        <li>Created promotional materials & social media content</li>
+        <li>Organized events like Women's Summit</li>
+        <li>Enhanced brand visibility through online campaigns</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Skills</h3>
+  <div class="grid">
+    <div class="card slide-right" style="animation-delay:0.1s">B2B Sales Using AI Tools</div>
+    <div class="card slide-left" style="animation-delay:0.2s">Sales Pipeline Management</div>
+    <div class="card slide-right" style="animation-delay:0.3s">Account Management</div>
+    <div class="card slide-left" style="animation-delay:0.4s">Revenue Growth</div>
+    <div class="card slide-right" style="animation-delay:0.5s">Client Retention</div>
+    <div class="card slide-left" style="animation-delay:0.6s">Business Communication</div>
+    <div class="card slide-right" style="animation-delay:0.7s">Google Suite & MS Office</div>
+  </div>
+</section>
+
+<section>
+  <h3>Projects & Achievements</h3>
+  <div class="grid">
+    <div class="card slide-left" style="animation-delay:0.1s">Shopify – Odoo Connector</div>
+    <div class="card slide-right" style="animation-delay:0.2s">Brand Gully Exhibition Marketing</div>
+    <div class="card slide-left" style="animation-delay:0.3s">AMUN & College Events Leadership</div>
+    <div class="card slide-right" style="animation-delay:0.4s">International Publication Certificate – Eudoxia Research University (USA)</div>
+    <div class="card slide-left" style="animation-delay:0.5s">Medhavi Vidyarthi Award – State Government</div>
+  </div>
+</section>
+
+<section>
+  <h3>Volunteering & Leadership</h3>
+  <div class="grid">
+    <div class="card slide-right" style="animation-delay:0.1s">Head of Hospitality & Food – AMUN 2024</div>
+    <div class="card slide-left" style="animation-delay:0.2s">Core Team – HR Conclave</div>
+    <div class="card slide-right" style="animation-delay:0.3s">Volunteered – India's Smart City Conclave 2023</div>
+    <div class="card slide-left" style="animation-delay:0.4s">Core Team – AMUN 2023</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>Contact</h3>
+  <p>Email: <a href="mailto:your-email@gmail.com" style="color:var(--accent);">your-email@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/jinsi-unjha-66a164287/" target="_blank" style="color:var(--accent);">linkedin.com/in/jinsi-unjha-66a164287</a></p>
+</section>
+
+<footer>
+  © 2026 Jinsi Unjha. All rights reserved.
+</footer>
 
 <script>
-const container = document.querySelector(".radial-container");
-const center = document.getElementById("center-circle");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('fade-in');
+        entry.target.classList.remove('slide-left', 'slide-right');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
 
-// Portfolio data
-const portfolio = {
-  "Projects": [
-    {text: "Shopify – Odoo", color:"#00ffd5"},
-    {text: "Brand Gully", color:"#1e90ff"},
-    {text: "AMUN 2024", color:"#ff6f61"},
-    {text: "Women's Summit", color:"#9b59b6"},
-    {text: "Marketing Campaigns", color:"#17a2b8"},
-    {text: "Client Conversions", color:"#ff8c00"}
-  ],
-  "Skills": [
-    {text: "B2B Sales", color:"#00ffd5"},
-    {text: "Pipeline Management", color:"#1e90ff"},
-    {text: "Account Management", color:"#ff6f61"},
-    {text: "Revenue Growth", color:"#9b59b6"},
-    {text: "Client Retention", color:"#17a2b8"},
-    {text: "Communication", color:"#ff8c00"}
-  ],
-  "Volunteering": [
-    {text: "AMUN Head", color:"#00ffd5"},
-    {text: "HR Conclave", color:"#1e90ff"},
-    {text: "Smart City Conclave", color:"#ff6f61"},
-    {text: "AMUN 2023 Core", color:"#9b59b6"}
-  ],
-  "Achievements": [
-    {text: "International Publication", color:"#00ffd5"},
-    {text: "Medhavi Vidyarthi Award", color:"#1e90ff"},
-    {text: "Business Expo 1st", color:"#ff6f61"},
-    {text: "Rangoli 2nd", color:"#9b59b6"}
-  ]
-};
-
-// Function to create orbiting circles
-function createOrbits(category){
-  // Remove old circles
-  document.querySelectorAll(".orbit-circle").forEach(c=>c.remove());
-  const items = portfolio[category];
-  const radius = 250;
-  const angleStep = (2*Math.PI)/items.length;
-  items.forEach((item,i)=>{
-    const circle = document.createElement("div");
-    circle.className = "orbit-circle";
-    circle.textContent = item.text;
-    circle.style.background = item.color;
-    // Position in a circle
-    const angle = i*angleStep;
-    const x = 50 + radius * Math.cos(angle)/container.offsetWidth*100;
-    const y = 50 + radius * Math.sin(angle)/container.offsetHeight*100;
-    circle.style.left = `${x}%`;
-    circle.style.top = `${y}%`;
-    container.appendChild(circle);
-
-    // Hover center text
-    circle.addEventListener("mouseover", ()=> center.textContent = item.text);
-    circle.addEventListener("mouseout", ()=> center.textContent = category);
-  });
-}
-
-// Initial load
-createOrbits("Projects");
-
-// Click center to switch sections
-let categories = ["Projects","Skills","Volunteering","Achievements"];
-let index = 0;
-center.addEventListener("click", ()=>{
-  index = (index+1)%categories.length;
-  center.textContent = categories[index];
-  createOrbits(categories[index]);
-});
-
-// Optional: rotate orbiting circles slowly
-let angleOffset = 0;
-setInterval(()=>{
-  document.querySelectorAll(".orbit-circle").forEach((c,i)=>{
-    const items = portfolio[center.textContent];
-    const radius = 250;
-    const angleStep = (2*Math.PI)/items.length;
-    const angle = i*angleStep + angleOffset;
-    const x = 50 + radius * Math.cos(angle)/container.offsetWidth*100;
-    const y = 50 + radius * Math.sin(angle)/container.offsetHeight*100;
-    c.style.left = `${x}%`;
-    c.style.top = `${y}%`;
-  });
-  angleOffset += 0.01;
-},30);
+  document.querySelectorAll('.card').forEach(card => observer.observe(card));
 </script>
 
 </body>
